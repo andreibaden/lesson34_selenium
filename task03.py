@@ -31,7 +31,7 @@ class SimpleGoogleTest(unittest.TestCase):
         question_input.send_keys("selenium")
         question_input.send_keys(Keys.ENTER)
 
-        selenium_link = self.driver.find_element(By.XPATH, '//*[@id="rso"]/div[1]/div/div/div/div/div/div/div[1]/a/h3')
+        selenium_link = self.driver.find_element(By.CSS_SELECTOR, '#rso > div:nth-child(1) > div > div > div.Z26q7c.UK95Uc.jGGQ5e > div > a > h3')
         selenium_link.click()
 
         actual_title = self.driver.title
